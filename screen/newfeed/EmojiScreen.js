@@ -1,4 +1,4 @@
-import { Text, View, Image, TouchableOpacity } from 'react-native'
+import { Text, View, SafeAreaView, Image, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
 import { emojiStyles } from './styles/EmojiStyles'
 
@@ -23,7 +23,7 @@ export default class EmojiScreen extends Component {
 
   render() {
     return (
-      <View style={emojiStyles.root}>
+      <SafeAreaView style={emojiStyles.root}>
         <Text style={emojiStyles.title}>How do you feel right now?</Text>
         <Image source={this.state.currentEmojiIcon} />
         <View style={emojiStyles.emojiIcon_btn_list}>
@@ -33,7 +33,7 @@ export default class EmojiScreen extends Component {
                 </TouchableOpacity>
             ))}
         </View>
-      </View>
+      </SafeAreaView>
     )
   }
 }
